@@ -15,4 +15,9 @@
         streamlit run car_price_predictor_from_csv.py
         ```
     5.  **Akses di browser:** Browser web Anda akan otomatis membuka tab baru dengan aplikasi Streamlit.
-    
+
+
+   info:
+        **Penting:** Model ini dilatih menggunakan data dari file '{CSV_FILE_PATH}'. 
+        Akurasi prediksi sangat bergantung pada kualitas, kuantitas, dan relevansi data di file tersebut.
+        Jika data di CSV adalah data sintetis atau tidak mencerminkan pasar riil, prediksi mungkin tidak akurat.
