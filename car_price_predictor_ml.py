@@ -7,17 +7,11 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 import os # Untuk memeriksa keberadaan file
 
-# --- 0. Muat Data dari CSV dan Latih Model ---
-# Bagian ini akan mencari dan memuat file CSV Anda.
-# Pastikan file CSV ('daftar_mobil.csv') berada di folder yang sama dengan skrip Python ini.
+CSV_FILE_PATH = 'daftar_mobil.csv'
 
-# --- Perubahan di Sini: Menggunakan nama file daftar_mobil.csv ---
-CSV_FILE_PATH = 'daftar_mobil.csv' # Nama file CSV Anda
-
-# Periksa apakah file CSV ada
 if not os.path.exists(CSV_FILE_PATH):
     st.error(f"Error: File '{CSV_FILE_PATH}' tidak ditemukan. Mohon letakkan file CSV Anda di folder yang sama dengan skrip Python ini.")
-    st.stop() # Hentikan aplikasi jika file tidak ditemukan
+    st.stop()
 
 try:
     df_train = pd.read_csv(CSV_FILE_PATH)
